@@ -21,12 +21,12 @@ function Nav() {
   }
 
   return (
-    <header>
+    <header className='flex-row'>
       <h2>
         <a href='/'>Darius Wright</a>
       </h2>
       <nav>
-        <ul>
+        <ul className='flex-row'>
           {links.map((link) => (
             <li key={link.name}>
               <span onClick={() => linkSelected(link.name)}>{link.name}</span>

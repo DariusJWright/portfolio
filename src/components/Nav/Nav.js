@@ -1,20 +1,6 @@
 import React from 'react';
 
-function Nav() {
-  const links = [
-    {
-      name: 'About Me'
-    },
-    {
-      name: 'Portfolio'
-    },
-    {
-      name: 'Contact'
-    },
-    {
-      name: 'Resumé'
-    }
-  ];
+function Nav({ links }) {
 
   function linkSelected(name) {
     console.log(name);

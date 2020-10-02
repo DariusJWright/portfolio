@@ -1,14 +1,30 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav';
+import Portfolio from './components/Portfolio/Portfolio';
 
 function App() {
+  const [links] = useState([
+    {
+      name: 'About Me'
+    },
+    {
+      name: 'Portfolio'
+    },
+    {
+      name: 'Contact'
+    },
+    {
+      name: 'Resumé'
+    }
+  ]);
+
   return (
     <div>
-      <Nav></Nav>
+      <Nav links={links}></Nav>
       <main>
+        <Portfolio></Portfolio>
         <About></About>
       </main>
     </div>

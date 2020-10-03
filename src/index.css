@@ -1,10 +1,19 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
   background-color: #023e8a;
   color: #00b4d8;
+}
+
+h1 {
+  font-size: 33px;
 }
 
 .flex-row {
@@ -17,10 +26,25 @@ a {
   color: #00b4d8;
 }
 
+header {
+  padding: 15px 0 15px 0;
+  position: sticky;
+  top: 0;
+  background-color: #00b4d8;
+  color: #023e8a;
+}
+
+header a {
+  margin-left: 15px;
+  color: #023e8a;
+}
+
 .nav-link {
   list-style: none;
   margin: 10px;
   cursor: pointer;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .nav-link:hover {
@@ -28,7 +52,20 @@ a {
 }
 
 section {
+  margin-top: 65px;
   margin-left: 65px;
+}
+
+.port {
+  margin-bottom: 150px;
+}
+
+.port a {
+  text-decoration: underline;
+}
+
+.port a:hover {
+  text-decoration: none;
 }
 
 .img-container {
@@ -45,9 +82,11 @@ section {
 
 .img-link:hover, .img-link2:hover {
   opacity: .5;
+  text-decoration: none;
 }
 
 form {
+  margin-top: 15px;
   width: 40%;
 }
 
@@ -98,7 +137,70 @@ button {
 button:hover {
   opacity: .5;
 }
-      
+
+.my-info {
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.my-info a {
+  text-decoration: underline;
+}
+
+.my-info a:hover {
+  opacity: .5;
+}
+
+.me {
+  height: 200px;
+  margin-top: 15px;
+}
+
+.about-text {
+  font-size: 25px;
+}
+
+.resume h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.resume li {
+  font-size: 18px;
+}
+
+.dl-resume {
+  font-size: 18px;
+}
+
+.dl-resume a {
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.dl-resume a:hover {
+  opacity: 0.5;
+}
+
+.footer {
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00b4d8;
+}
+
+.footer-link {
+  height: 50px;
+  margin: 10px;
+}
+
+.footer-link:hover {
+  opacity: 0.5;
+}
+
 .nav-link-active {
   color:#caf0f8;
 }

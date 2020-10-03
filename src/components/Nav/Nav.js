@@ -13,9 +13,9 @@ function Nav(props) {
 
   return (
     <header className='flex-row'>
-      <h2>
+      <h1>
         <a href='/'>Darius Wright</a>
-      </h2>
+      </h1>
       <nav>
         <ul className='flex-row'>
           {links.map((link) => (

@@ -2,8 +2,13 @@ import React from 'react';
 
 function Resume () {
   return (
-    <section>
+    <section className='resume'>
       <h1>Resumé</h1>
+      <br></br>
+      <div className='dl-resume'>
+        Download my resumé here:      
+        <a href={require('../../assets/files/resume.txt')} download='resumé' target='blank'>resumé</a>
+      </div>
       <div>
         <h3>Front-End Proficiencies</h3>
         <ul>

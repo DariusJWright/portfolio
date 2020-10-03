@@ -14,4 +14,4 @@ A React app showcasing some of the things I've worked on.
 * Deployed Site: http://dariusjwright.github.io/portfolio
 
 ## Screenshot
-![budget-screenshot](https://user-images.githubusercontent.com/64335245/94721484-8e388080-031b-11eb-8674-eb9baa9c422d.PNG)
+![screenshot](https://user-images.githubusercontent.com/64335245/95001900-30629d80-0594-11eb-844f-69b412e7403f.PNG)

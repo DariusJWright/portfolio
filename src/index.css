@@ -1,26 +1,30 @@
 * {
   box-sizing: border-box;
+}
+
+body {
   background-color: #023e8a;
-  color: #ade8f4;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-  margin: 10px;
-  cursor: pointer;
-}
-
-li:hover {
-  opacity: .5;
+  color: #00b4d8;
 }
 
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: #00b4d8;
+}
+
+.nav-link {
+  list-style: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  opacity: .5;
 }
 
 section {
@@ -48,12 +52,18 @@ form {
 }
 
 input {
+  display: block;
   font-size: 1rem;
   padding: 0.25rem;
   border: 1px solid #ade8f4;
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
+  width: 400px;
+}
+
+label {
+  display: block;
 }
 
 input:focus {
@@ -62,7 +72,7 @@ input:focus {
 }
 
 textarea {
-  width: 600px;
+  width: 400px;
 	height: 80px;
 	border: 1px solid #ade8f4;
 	padding: 5px;
@@ -87,4 +97,8 @@ button {
 
 button:hover {
   opacity: .5;
+}
+      
+.nav-link-active {
+  color:#caf0f8;
 }

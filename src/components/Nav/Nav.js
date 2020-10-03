@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function Nav({ links }) {
+function Nav(props) {
+  const {
+    links = [],
+    currentLink,
+    setCurrentLink
+  } = props
 
-  function linkSelected(name) {
-    console.log(name);
-  }
+  useEffect(() => {
+    document.title = currentLink.name;
+  }, [currentLink]);
 
   return (
     <header className='flex-row'>
@@ -14,8 +19,8 @@ function Nav({ links }) {
       <nav>
         <ul className='flex-row'>
           {links.map((link) => (
-            <li key={link.name}>
-              <span onClick={() => linkSelected(link.name)}>{link.name}</span>
+            <li className={`nav-link ${currentLink.name === link.name && 'nav-link-active'}`} key={link.name}>
+              <span onClick={() => {setCurrentLink(link)}}>{link.name}</span>
             </li>
           ))}
         </ul>

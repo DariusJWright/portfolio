@@ -3,7 +3,8 @@ import './App.css';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav';
 import Portfolio from './components/Portfolio/Portfolio';
-import Contact from './components/Contact/Contact'
+import Contact from './components/Contact/Contact';
+import Resume from './components/Resume/Resume';
 
 function App() {
   const [links] = useState([
@@ -20,14 +21,26 @@ function App() {
       name: 'Resumé'
     }
   ]);
+  const [currentLink, setCurrentLink] = useState(links[0]);
+
+  const renderPage = () => {
+    switch (currentLink.name) {
+      case 'Portfolio':
+        return <Portfolio />;
+      case 'Contact':
+        return <Contact />
+      case 'Resumé':
+        return <Resume />
+      default:
+        return <About />
+    }
+  }
 
   return (
     <div>
-      <Nav links={links}></Nav>
+      <Nav links={links} currentLink={currentLink} setCurrentLink={setCurrentLink}></Nav>
       <main>
-        <Contact />
-        <Portfolio></Portfolio>
-        <About></About>
+        <div currentLink={currentLink}>{renderPage(currentLink)}</div>
       </main>
     </div>
   );

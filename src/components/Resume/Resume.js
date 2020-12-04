@@ -15,18 +15,28 @@ function Resume () {
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
+          <li>jQuery</li>
+          <li>Media Queries</li>
           <li>Bootstrap</li>
-          <li>React</li>
+          <li>Handlebars.js</li>
+          <li>React.js</li>
+          <li>React Redux</li>
+          <li>Test Writing</li>
         </ul>
         </div>
       <div>
         <h3>Back-End Proficiencies</h3>
         <ul>
-          <li>Node</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
           <li>MongoDB</li>
-          <li>SQL</li>
-          <li>Express</li>
+          <li>MySQL</li>
+          <li>Sequelize.js</li>
           <li>API's</li>
+          <li>REST</li>
+          <li>JSON</li>
+          <li>AJAX</li>
+          <li>Command Line</li>
         </ul>
       </div>
     </section>

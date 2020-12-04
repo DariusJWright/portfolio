@@ -5,6 +5,7 @@
 
 html, body {
   height: 100%;
+  margin-bottom: 20px;
 }
 
 body {
@@ -199,6 +200,10 @@ button:hover {
 
 .footer-link:hover {
   opacity: 0.5;
+}
+
+.space {
+  height: 80px;
 }
 
 .nav-link-active {

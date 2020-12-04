@@ -43,6 +43,7 @@ function App() {
       <main>
         <div currentLink={currentLink}>{renderPage(currentLink)}</div>
       </main>
+      <div className='space'></div>
       <footer>
         <Footer />
       </footer>

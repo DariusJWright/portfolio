@@ -6,7 +6,7 @@ import apikeys from '../../apikeys';
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
   const { name, email, message } = formState;
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('name is required');
 
   function handleChange(e) {
     if (e.target.name === 'email') {
@@ -25,23 +25,23 @@ function Contact() {
     }
 
     if (!errorMessage) {
-      setFormState({...formState, [e.target.name]: e.target.value });
+      setFormState({ ...formState, [e.target.name]: e.target.value });
     }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (formState) {
-    emailjs.sendForm('gmail', apikeys.TEMPLATE_ID, e.target, apikeys.USER_ID)
-      .then(result => {
-        alert("Message Submitted Successfully! I'll contact you soon!", result.text);
-      },
-      error => {
-        alert('An error occured, Please try again', error.text)
-      })
+    if (!errorMessage) {
+      emailjs.sendForm('gmail', apikeys.TEMPLATE_ID, e.target, apikeys.USER_ID)
+        .then(result => {
+          alert("Message submitted successfully! I'll contact you soon!", result.text);
+        },
+          error => {
+            alert('An error occured, Please try again', error.text)
+          })
     } else {
       alert('Please fill in all fields');
-    }  
+    }
     console.log(formState);
   }
 
@@ -51,15 +51,15 @@ function Contact() {
       <form id='contact-form' onSubmit={handleSubmit}>
         <div>
           <label htmlFor='name'>Name:</label>
-          <input type='text' name='name' defaultValue={name} onBlur={handleChange}/>
+          <input autofocus='true' type='text' name='name' defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor='email'>Email Address:</label>
-          <input type='text' name='email' defaultValue={email} onBlur={handleChange}/>
+          <input type='text' name='email' defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
           <label htmlFor='message'>Message:</label>
-          <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange}/>
+          <textarea name='message' rows='5' defaultValue={message} onBlur={handleChange} />
         </div>
 
         {errorMessage && (

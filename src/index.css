@@ -209,3 +209,8 @@ button:hover {
 .nav-link-active {
   color:#caf0f8;
 }
+
+.error-text {
+  color: red;
+  font-size: larger;
+}

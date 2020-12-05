@@ -15,7 +15,7 @@ function App() {
       name: 'About Me'
     },
     {
-      name: 'Portfolio'
+      name: 'My Work'
     },
     {
       name: 'Contact'
@@ -45,10 +45,10 @@ function App() {
         <Nav links={links} currentLink={currentLink} setCurrentLink={setCurrentLink}></Nav>
         <main>
           <Switch>
-            <Route exact path="/About Me" component={About} />
-            <Route exact path="/portfolio" component={Portfolio} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/Resume" component={Resume} />
+            <Route exact path="portfolio/about me" component={About} />
+            <Route exact path="portfolio/my work" component={Portfolio} />
+            <Route exact path="portfolio/contact" component={Contact} />
+            <Route exact path="portfolio/resume" component={Resume} />
 
             <Route component={NoMatch} />
           </Switch>

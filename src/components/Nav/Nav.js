@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Nav(props) {
   const {
@@ -19,9 +20,9 @@ function Nav(props) {
       <nav>
         <ul className='flex-row'>
           {links.map((link) => (
-            <li className={`nav-link ${currentLink.name === link.name && 'nav-link-active'}`} key={link.name}>
+            <NavLink to={`/${link.name}`} activeClassName='nav-link-active' className='nav-link' key={link.name}>
               <span onClick={() => {setCurrentLink(link)}}>{link.name}</span>
-            </li>
+            </NavLink>
           ))}
         </ul>
       </nav>

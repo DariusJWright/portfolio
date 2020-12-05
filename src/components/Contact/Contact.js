@@ -23,7 +23,7 @@ function Contact() {
         setErrorMessage('');
       }
     }
-
+    
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }

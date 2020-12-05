@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -45,10 +45,10 @@ function App() {
         <Nav links={links} currentLink={currentLink} setCurrentLink={setCurrentLink}></Nav>
         <main>
           <Switch>
-            <Route exact path="portfolio/about me" component={About} />
-            <Route exact path="portfolio/my work" component={Portfolio} />
-            <Route exact path="portfolio/contact" component={Contact} />
-            <Route exact path="portfolio/resume" component={Resume} />
+            <Route exact path="/about me" component={About} />
+            <Route exact path="/my work" component={Portfolio} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/resume" component={Resume} />
 
             <Route component={NoMatch} />
           </Switch>

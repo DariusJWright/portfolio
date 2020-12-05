@@ -20,7 +20,7 @@ function Nav(props) {
       <nav>
         <ul className='flex-row'>
           {links.map((link) => (
-            <NavLink to={`/${link.name}`} activeClassName='nav-link-active' className='nav-link' key={link.name}>
+            <NavLink to={`${link.name}`} activeClassName='nav-link-active' className='nav-link' key={link.name}>
               <span onClick={() => {setCurrentLink(link)}}>{link.name}</span>
             </NavLink>
           ))}

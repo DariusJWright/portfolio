@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { validateEmail } from '../../utils/helpers'
+import { validateEmail } from '../../utils/helpers';
+import emailjs from 'emailjs-com';
+import apikeys from '../../apikeys';
 
 function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -9,7 +11,6 @@ function Contact() {
   function handleChange(e) {
     if (e.target.name === 'email') {
       const isValid = validateEmail(e.target.value);
-      console.log(isValid);
       if (!isValid) {
         setErrorMessage('Your email is invalid.');
       } else {
@@ -30,6 +31,17 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (formState) {
+    emailjs.sendForm('gmail', apikeys.TEMPLATE_ID, e.target, apikeys.USER_ID)
+      .then(result => {
+        alert("Message Submitted Successfully! I'll contact you soon!", result.text);
+      },
+      error => {
+        alert('An error occured, Please try again', error.text)
+      })
+    } else {
+      alert('Please fill in all fields');
+    }  
     console.log(formState);
   }
 

@@ -214,3 +214,9 @@ button:hover {
   color: red;
   font-size: larger;
 }
+
+.welcome {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 135px;
+}

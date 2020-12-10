@@ -15,7 +15,7 @@ function Nav(props) {
   return (
     <header className='flex-row'>
       <h1>
-        Darius Wright
+        <NavLink to='/'>Darius Wright</NavLink>
       </h1>
       <nav>
         <ul className='flex-row'>

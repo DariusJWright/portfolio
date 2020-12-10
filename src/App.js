@@ -27,19 +27,6 @@ function App() {
   ]);
   const [currentLink, setCurrentLink] = useState(links[0]);
 
-  const renderPage = () => {
-    switch (currentLink.name) {
-      case 'Portfolio':
-        return <Portfolio />;
-      case 'Contact':
-        return <Contact />
-      case 'Resumé':
-        return <Resume />
-      default:
-        return <About />
-    }
-  }
-
   return (
     <Router>
       <div>

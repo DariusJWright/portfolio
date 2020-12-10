@@ -4,7 +4,7 @@ function Portfolio() {
   return (
     <section className='port'>
       <h1>My Work</h1>
-      <div className='flex-row'>
+      <div className='port-flex'>
         <div className='img-container'>
           <img src={require('../../assets/images/instartist.PNG')} alt='instartist' className='thumbnail'></img>
           <div className='img-desc'>

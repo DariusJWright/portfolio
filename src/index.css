@@ -57,8 +57,10 @@ section {
   margin-left: 65px;
 }
 
-.port {
-  margin-bottom: 150px;
+.port-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .port a {

@@ -6,7 +6,7 @@ function Footer () {
         <a href='https://github.com/DariusJWright' target='blank'>
           <img src={require('../../assets/images/GitHub-Mark.png')} className='footer-link'></img>
         </a>
-        <a href='https://www.linkedin.com/in/darius-wright-82948a114/' target='blank'>
+        <a href='https://www.linkedin.com/in/dariuswright/' target='blank'>
           <img src={require('../../assets/images/linkedin.png')} className='footer-link'></img>
         </a>
         <a href='https://stackoverflow.com/users/13408025/darius-wright?tab=profile' target='blank'>

@@ -1,61 +1,63 @@
 import React from 'react';
 
 function Portfolio() {
+  const works = [
+    {
+      name: 'Instartist',
+      desc: 'Full stack group project',
+      image: 'instartist',
+      link: 'https://instartist.herokuapp.com/',
+      github: 'https://github.com/christopherConcannon/instartist'
+    },
+    {
+      name: 'Weather Dashboard',
+      desc: 'Front-end',
+      image: 'weather',
+      link: 'https://dariusjwright.github.io/weather-app/',
+      github: 'https://github.com/dariusjwright/weather-app'
+    },
+    {
+      name: 'Bored at Home',
+      desc: 'Front-end group project',
+      image: 'bored',
+      link: 'https://josephptflanagan.github.io/project-1/',
+      github: 'https://github.com/josephptflanagan/project-1'
+    },
+    {
+      name: 'Note Taker',
+      desc: 'Front-end',
+      image: 'note',
+      link: 'https://limitless-citadel-95475.herokuapp.com/notes',
+      github: 'https://github.com/dariusjwright/note-taker'
+    }
+
+  ]
   return (
     <section className='port'>
       <h1>My Work</h1>
-      <div className='port-flex'>
-        <div className='img-container'>
-          <img src={require('../../assets/images/instartist.PNG')} alt='instartist' className='thumbnail'></img>
-          <div className='img-desc'>
-            <p>Full stack group project</p>
-          </div>
-          <div className='img-link'>
-            <a href='https://instartist.herokuapp.com/' target='blank'>Instartist</a>
-          </div>
-          <div className='img-link2'>
-            <a href='https://github.com/christopherConcannon/instartist' target='blank'>Github</a>
-          </div>
-        </div>
-        
-        <div className='img-container'>
-          <img src={require('../../assets/images/weather.png')} alt='weather app' className='thumbnail'></img>
-          <div className='img-desc'>
-            <p>Front End</p>
-          </div>
-          <div className='img-link'>
-            <a href='https://dariusjwright.github.io/weather-app/' target='blank'>Weather Dashboard</a>
-          </div>
-          <div className='img-link2'>
-            <a href='https://github.com/dariusjwright/weather-app' target='blank'>Github</a>
-          </div>          
-        </div>
+      <div className='port-grid'>
+        {works.map(works => (
+          <>
+            <div className='img-container'>
+              <img
+                src={require(`../../assets/images/${works.image}.png`)}
+                alt={works.name}
+                className='thumbnail'
+              />
+            </div>
 
-        <div className='img-container'>
-          <img src={require('../../assets/images/bored.png')} alt='bored at home' className='thumbnail'></img>
-          <div className='img-desc'>
-            <p>Front End Group Project</p>
-          </div>
-          <div className='img-link'>
-            <a href='https://josephptflanagan.github.io/project-1/' target='blank'>Bored at Home</a>
-          </div>
-          <div className='img-link2'>
-            <a href='https://github.com/josephptflanagan/project-1' target='blank'>Github</a>
-          </div>       
-        </div>
+            <div className='img-desc'>
+              <p>{works.desc}</p>
+            </div>
 
-        <div className='img-container'>
-          <img src={require('../../assets/images/note.png')} alt='note taker' className='thumbnail'></img>
-          <div className='img-desc'>
-            <p>Front End</p>
-          </div>
-          <div className='img-link'>
-            <a href='https://limitless-citadel-95475.herokuapp.com/notes' target='blank'>Note Taker</a>
-          </div>
-          <div className='img-link2'>
-            <a href='https://github.com/dariusjwright/note-taker' target='blank'>Github</a>
-          </div>       
-        </div>
+            <div className='img-link'>
+              <a href={works.link} target='blank'>{works.name}</a>
+            </div>
+            <div className='img-link2'>
+              <a href={works.github} target='blank'>Github</a>
+            </div>
+          </>
+        ))}
       </div>
     </section>
   );

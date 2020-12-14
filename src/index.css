@@ -5,7 +5,7 @@
 
 html, body {
   height: 100%;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  font-size: 33px;
+  font-size: 2.5em;
 }
 
 .flex-row {
@@ -27,6 +27,7 @@ a {
   color: #00b4d8;
 }
 
+/* header styles */
 header {
   padding: 15px 0 15px 0;
   position: sticky;
@@ -52,15 +53,20 @@ header a {
   opacity: .5;
 }
 
-section {
-  margin-top: 65px;
+.nav-link-active {
+  color:#caf0f8;
+}
+
+/* my work styles */
+.port {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* margin-top: 65px; */
   margin-left: 65px;
 }
 
-.port-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.port h1 {
+  grid-column: 2 /3;
 }
 
 .port a {
@@ -69,28 +75,43 @@ section {
 
 .port a:hover {
   text-decoration: none;
+  opacity: .5;
+  text-decoration: none;
+}
+
+.port-grid {
+  grid-column: 2 / span 3;
 }
 
 .img-container {
   margin-right: 15px;
+  width: 100%;
 }
 
 .thumbnail {
   margin-top: 20px;
+  width: 100%;
+  height: auto;
 }
 
 .img-link, .img-link2, .img-desc {
   font-size: 25px;
 }
 
-.img-link:hover, .img-link2:hover {
-  opacity: .5;
-  text-decoration: none;
+/* contact styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.contact-grid h1 {
+  grid-column: 2 /3;
 }
 
 form {
+  grid-column-start: 2;
   margin-top: 15px;
-  width: 40%;
+  width: 100%;
 }
 
 input {
@@ -101,11 +122,12 @@ input {
   outline: none;
   border-radius: 3px;
   transition: box-shadow 0.2s;
-  width: 400px;
+  width: 100%;
 }
 
 label {
   display: block;
+  font-size: 1.5rem;
 }
 
 input:focus {
@@ -114,15 +136,21 @@ input:focus {
 }
 
 textarea {
-  width: 400px;
-	height: 80px;
-	border: 1px solid #ade8f4;
+  width: 100%;
+	height: 20%;
+	border: 2px solid #ade8f4;
 	padding: 5px;
 }
 
 textarea:focus {
-  border: 5px solid #0077b6;
+  border: 2px solid #0077b6;
   box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+  outline: none;
+}
+
+.error-text {
+  color: red;
+  font-size: larger;
 }
 
 button {
@@ -133,7 +161,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  margin: .5em 0;
   background-color: #0077b6;
 }
 
@@ -142,39 +170,49 @@ button:hover {
 }
 
 .my-info {
-  margin-top: 15px;
-  font-size: 25px;
+  font-size: 1.5rem;
+  margin-top: .75em;
+  grid-column-start: 2;
 }
 
-.my-info a {
-  text-decoration: underline;
+/* about me styles */
+section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-.my-info a:hover {
-  opacity: .5;
+section h1 {
+  grid-column: 2 / 3;
 }
 
 .me {
-  height: 200px;
+  grid-column-start: 2;
+  height: auto;
+  width: 100%;
   margin-top: 15px;
 }
 
 .about-text {
-  font-size: 25px;
+  grid-column: 2 / 5;
+  font-size: 1.5em;
 }
 
-.resume h3 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 25px;
+/* resume styles */
+.resume {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* justify-items: center; */
 }
 
-.resume li {
-  font-size: 18px;
+.resume h1 {
+  grid-column-start: 2;
+  font-size: 2.5em
 }
 
 .dl-resume {
-  font-size: 18px;
+  display: flex;
+  grid-column: 2 / 6;
+  font-size: 1.75em;
 }
 
 .dl-resume a {
@@ -186,6 +224,28 @@ button:hover {
   opacity: 0.5;
 }
 
+.front-end {
+  grid-column: 2 / 3;
+  width: 100%;
+}
+
+.back-end {
+  grid-column: 4 / 5;
+  width: 100%;
+}
+
+.front-end h3,
+.back-end h3 {
+  margin: 15px 0 15px 0;
+  font-size: 1.75em
+}
+
+.resume li {
+  font-size: 1.25em;
+}
+
+
+/* footer styles */
 .footer {
   justify-content: center;
   position: fixed;
@@ -204,21 +264,12 @@ button:hover {
   opacity: 0.5;
 }
 
-.space {
-  height: 80px;
-}
-
-.nav-link-active {
-  color:#caf0f8;
-}
-
-.error-text {
-  color: red;
-  font-size: larger;
-}
-
 .welcome {
   text-align: center;
   margin-top: 50px;
   font-size: 135px;
+}
+
+.space {
+  height: 15vh;
 }

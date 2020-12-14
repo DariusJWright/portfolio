@@ -46,7 +46,7 @@ function Contact() {
   }
 
   return (
-    <section>
+    <div className='contact-grid'>
       <h1>Contact Me</h1>
       <form id='contact-form' onSubmit={handleSubmit}>
         <div>
@@ -76,7 +76,7 @@ function Contact() {
         <br></br>
         <a href='tel:9033724740'>Phone: 903.372.4740</a>
       </div>
-    </section>
+    </div>
   )
 }
 

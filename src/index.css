@@ -21,6 +21,9 @@ h2 {
   font-size: 2em;
 }
 
+h3 {
+  font-size: 1.75em;
+}
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -29,10 +32,6 @@ h2 {
 a {
   text-decoration: none;
   color: #00b4d8;
-}
-
-li {
-  list-style: none;
 }
 
 /* header styles */
@@ -72,6 +71,7 @@ nav ul {
 }
 
 nav li {
+  list-style: none;
   margin-left: 1em;
   margin-bottom: 0;
 }
@@ -107,8 +107,6 @@ nav li {
 .port {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* margin-top: 65px; */
-  margin-left: 65px;
 }
 
 .port h2 {
@@ -144,7 +142,9 @@ nav li {
   font-size: 25px;
 }
 
+/*=====================*/
 /* contact styles */
+/*=====================*/
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -221,7 +221,9 @@ button:hover {
   grid-column-start: 2;
 }
 
+/*=====================*/
 /* about me styles */
+/*=====================*/
 section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -243,11 +245,12 @@ section h2 {
   font-size: 1.5em;
 }
 
+/*=====================*/
 /* resume styles */
+/*=====================*/
 .resume {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /* justify-items: center; */
 }
 
 .resume h2 {
@@ -282,15 +285,15 @@ section h2 {
 .front-end h3,
 .back-end h3 {
   margin: 15px 0 15px 0;
-  font-size: 1.75em
 }
 
 .resume li {
   font-size: 1.25em;
 }
 
-
+/*=====================*/
 /* footer styles */
+/*=====================*/
 .footer {
   justify-content: center;
   position: fixed;
@@ -319,15 +322,26 @@ section h2 {
   height: 15vh;
 }
 
-@media screen and (max-width: 840px) {
-  h2 {
+@media screen and (max-width: 750px) {
+  /*==================*/
+  /*global styles*/
+  /*==================*/
+  h1 {
     font-size: 1.5em;
+  }
+  
+  h2 {
+    font-size: 22px;
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 18px;
+    font-weight:900
   }
 
+  /*==================*/
+  /*header styles*/
+  /*==================*/
   header {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;;
@@ -410,22 +424,153 @@ section h2 {
   .nav-toggle:checked ~ nav {
     transform: scale(1, 1);
   }
+  
+  /*==================*/
+  /*resume styles*/
+  /*==================*/
+  .dl-resume p {
+    font-size: 18px;
+  }
+
+  .resume a {
+    font-size: 18px;
+  }
+
+  .back-end {
+    grid-column: 2 / 3;
+  }
+
+  .resume li {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 840px) {
+    /*==================*/
+    /*global styles*/
+    /*==================*/
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    h2 {
+      font-size: 22px;
+    }
+  
+    h3 {
+      font-size: 18px;
+      font-weight:900
+    }
+  
+    /*==================*/
+    /*header styles*/
+    /*==================*/
+    header {
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0;;
+      width: 100%;
+      margin-left: 0;
+      grid: 1 / 5;
+    }
+    
+    .title {
+      padding: 5px 0 5px 0;
+      grid-column: 2 / 3;
+    }
+  
+    nav {
+      position: absolute;
+      grid-column: 1 / 6;
+      text-align: left;
+      top: 100%;
+      left: 0;
+      margin-left: 0;
+      padding: 0;
+      background: #00b4d8;
+      width: 100%;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 150ms ease-in-out;
+    }
+  
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+      padding: 0;
+    }
+  
+    nav li {
+      margin-bottom: 1em;
+      margin-left: 1em;
+    }
+  
+    nav a {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+    
+    .nav-toggle-label {
+      margin-right: 1em;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      display: block;
+      justify-items: right;
+      background: #023e8a;
+      height: 2px;
+      right: 5;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+  
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+      content: '';
+      position: absolute;
+    }
+  
+    .nav-toggle-label span::before {
+      bottom: 7px;
+    }
+  
+    .nav-toggle-label span::after {
+      top: 7px;
+    }
+  
+    .nav-toggle:checked ~ nav {
+      transform: scale(1, 1);
+    }
+  }
+  
+  /*==================*/
+  /*resume styles*/
+  /*==================*/
+  .dl-resume p {
+    font-size: 18px;
+  }
+  
+  .resume a {
+    font-size: 18px;
+  }
+  
+  .back-end {
+    grid-column: 2 / 3;
+  }
+  
+  .resume li {
+    font-size: 18px;
+  }
+
+  /*==================*/
+  /*my work styles*/
+  /*==================*/
+
+
 }
-
-.about-text {
-  font-size: 1em;
-}
-
-.dl-resume {
-  font-size: 1em;
-}
-
-.front-end,
-.back-end {
-  font-size: .75em;
-}
-
-
-
-
-

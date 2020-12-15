@@ -34,7 +34,7 @@ function Portfolio() {
   ]
   return (
     <section className='port'>
-      <h1>My Work</h1>
+      <h2>My Work</h2>
       <div className='port-grid'>
         {works.map(works => (
           <>

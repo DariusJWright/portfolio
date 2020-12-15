@@ -341,6 +341,13 @@ section h2 {
   }
 
   /*==================*/
+  /*home styles*/
+  /*==================*/
+  .welcome {
+    font-size: 75px;
+  }
+
+  /*==================*/
   /*header styles*/
   /*==================*/
   header {
@@ -482,5 +489,17 @@ section h2 {
   .port-grid p,
   .port-grid a {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    display: flex;
+    
+  }    
+
+  .welcome {
+    margin-top: 200px;
+    font-size: 50px;
   }
 }

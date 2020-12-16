@@ -44,17 +44,17 @@ function Portfolio() {
                 alt={works.name}
                 className='thumbnail'
               />
-            </div>
 
-            <div className='img-desc'>
-              <p>{works.desc}</p>
-            </div>
+              <div className='img-desc'>
+                <p>{works.desc}</p>
+              </div>
 
-            <div className='img-link'>
-              <a href={works.link} target='blank'>{works.name}</a>
-            </div>
-            <div className='img-link2'>
-              <a href={works.github} target='blank'>Github</a>
+              <div className='img-link'>
+                <a href={works.link} target='blank'>Visit</a>
+              </div>
+              <div className='img-link2'>
+                <a href={works.github} target='blank'>Github</a>
+              </div>
             </div>
           </>
         ))}

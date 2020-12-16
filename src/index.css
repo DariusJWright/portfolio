@@ -46,6 +46,7 @@ header {
   top: 0;
   background-color: #00b4d8;
   color: #023e8a;
+  z-index: 999;
 }
 
 header h1 {
@@ -115,13 +116,12 @@ nav li {
 }
 
 .port a {
-  text-decoration: underline;
+  text-decoration: none;
+  padding: 5px;
 }
 
 .port a:hover {
-  text-decoration: none;
   opacity: .5;
-  text-decoration: none;
 }
 
 .port-grid {
@@ -131,6 +131,7 @@ nav li {
 .img-container {
   margin-right: 15px;
   width: 100%;
+  position: relative;
 }
 
 .thumbnail {
@@ -141,6 +142,34 @@ nav li {
 
 .img-link, .img-link2, .img-desc {
   font-size: 25px;
+}
+
+.img-link, .img-link2 {
+  position: absolute;
+  opacity: 0;
+  background-color: #023e8a;
+  height: 50px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 8%
+}
+.img-link {
+  top: 45%;
+  left: 25%;
+}
+
+.img-link2 {
+  top: 45%;
+  right: 25%;
+}
+
+.img-container:hover .img-link {
+  opacity: 1;
+}
+
+.img-container:hover .img-link2 {
+  opacity: 1;
 }
 
 /*=====================*/
@@ -489,6 +518,15 @@ section h2 {
   .port-grid p,
   .port-grid a {
     font-size: 20px;
+  }
+
+  .img-link, 
+  .img-link2 {
+    all: unset;
+  }
+
+  .port-grid a {
+    text-decoration: underline;
   }
 }
 

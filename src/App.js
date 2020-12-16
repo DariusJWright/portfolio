@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import About from './components/About/About';
 import Nav from './components/Nav/Nav';
 import Portfolio from './components/Portfolio/Portfolio';
@@ -28,26 +28,28 @@ function App() {
   const [currentLink, setCurrentLink] = useState(links[0]);
 
   return (
-    <Router>
-      <div>
-        <Nav links={links} currentLink={currentLink} setCurrentLink={setCurrentLink}></Nav>
-        <main>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about me" component={About} />
-            <Route exact path="/my work" component={Portfolio} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/resume" component={Resume} />
-            <Route component={NoMatch} />
-          </Switch>
-          <div currentLink={currentLink}></div>
-        </main>
-        <div className='space'></div>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
-    </Router>
+    <>
+      <Router>
+        <div>
+          <Nav links={links} currentLink={currentLink} setCurrentLink={setCurrentLink}></Nav>
+          <main>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about me" component={About} />
+              <Route exact path="/my work" component={Portfolio} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/resume" component={Resume} />
+              <Route component={NoMatch} />
+            </Switch>
+            <div currentLink={currentLink}></div>
+          </main>
+          <div className='space'></div>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </Router>
+    </>
   );
 }
 

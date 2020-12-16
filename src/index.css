@@ -345,8 +345,50 @@ section h2 {
 .welcome {
   text-align: center;
   margin-top: 50px;
-  font-size: 135px;
+  font-size: 75px;
 }
+
+@keyframes counter-clock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+.animation,
+.animation2 {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.animation {
+  animation-name: counter-clock;
+  animation-duration: 20s;
+  background-color: #0077b6;
+  animation-direction: reverse;
+  margin: 100px auto;
+}
+
+.animation2 {
+  animation-name: clock;
+  animation-duration: 10s;
+  background-color: #00b4d8;
+  margin: auto;
+}
+
 
 .space {
   height: 15vh;
@@ -375,6 +417,8 @@ section h2 {
   .welcome {
     font-size: 75px;
   }
+
+  
 
   /*==================*/
   /*header styles*/

@@ -341,7 +341,9 @@ section h2 {
 .footer-link:hover {
   opacity: 0.5;
 }
-
+/*===============*/
+/*Home styles*/
+/*===============*/
 .welcome {
   text-align: center;
   margin-top: 50px;
@@ -577,11 +579,31 @@ section h2 {
 @media screen and (max-width: 500px) {
   .home {
     display: flex;
-    
+    align-items: flex-start;
   }    
 
   .welcome {
-    margin-top: 200px;
     font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .welcome {
+    font-size: 25px;
+  }
+
+  .dl-resume p span {
+    display: none;
+  }
+
+  .dl-resume p::after {
+    content: "Download here:";
+  }
+
+  .dl-resume a {
+    grid-column: 3 / 4;
+    display: flex;
+    margin-right: 20px;
+    align-items: flex-end;
   }
 }

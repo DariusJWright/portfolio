@@ -5,7 +5,7 @@ function Resume () {
     <div className='resume'>
       <h2>Resume</h2>
       <div className='dl-resume'>
-        <p>Download my resume here:</p>      
+        <p><span>Download my resume here:</span></p>      
         <a href={require('../../assets/files/Resume.pdf')} download='resumé' target='blank'>resume.pdf</a>
       </div>
       <div className='front-end'>

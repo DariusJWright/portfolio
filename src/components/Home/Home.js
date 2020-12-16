@@ -8,9 +8,8 @@ function Home() {
     <div classname='home'>
       <h1 className='welcome'>WELCOME TO MY PORTFOLIO!</h1>
       <div className='animation'>
-      <div className='animation2'></div>
+        <div className='animation2'></div>
       </div>
-      
     </div>
   )
 }

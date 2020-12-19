@@ -3,12 +3,11 @@
 ## Description
 A responsive React app showcasing some of the things I've worked on.
 
-
 ## Technologies
+* JSX
 * CSS
 * JS
 * React
-* XML
 
 ## Links
 * Repository: https://github.com/DariusJWright/portfolio

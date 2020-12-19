@@ -1,10 +1,10 @@
 # Portfolio
 
 ## Description
-A React app showcasing some of the things I've worked on.
-
+A responsive React app showcasing some of the things I've worked on.
 
 ## Technologies
+* JSX
 * CSS
 * JS
 * React
@@ -14,4 +14,4 @@ A React app showcasing some of the things I've worked on.
 * Deployed Site: http://dariusjwright.github.io/portfolio
 
 ## Screenshot
-![screenshot](https://user-images.githubusercontent.com/64335245/95001900-30629d80-0594-11eb-844f-69b412e7403f.PNG)
+![screenshot](https://user-images.githubusercontent.com/64335245/102401599-353ac900-3fa9-11eb-853b-8f40fbde5797.PNG)

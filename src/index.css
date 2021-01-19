@@ -140,36 +140,38 @@ nav li {
   height: auto;
 }
 
-.img-link, .img-link2, .img-desc {
+.img-desc {
   font-size: 25px;
 }
 
 .img-link, .img-link2 {
   position: absolute;
   opacity: 0;
-  background-color: #023e8a;
-  height: 50px;
+  height: auto;
   width: auto;
   display: flex;
   align-items: center;
-  border-radius: 8%
+  border-radius: 8%;
 }
+
 .img-link {
-  top: 45%;
+  top: 35%;
   left: 25%;
 }
 
 .img-link2 {
-  top: 45%;
+  top: 37%;
   right: 25%;
 }
 
-.img-container:hover .img-link {
-  opacity: 1;
+.img-container:hover img {
+  /* filter: blur(3px); */
 }
 
+.img-container:hover .img-link,
 .img-container:hover .img-link2 {
-  opacity: 1;
+  opacity: 200%;
+  /* backdrop-filter: blur(4px); */
 }
 
 /*=====================*/
@@ -570,6 +572,11 @@ section h2 {
   .img-link, 
   .img-link2 {
     all: unset;
+  }
+
+  .img-link a img, 
+  .img-link2 a img {
+    height: 40px;
   }
 
   .port-grid a {

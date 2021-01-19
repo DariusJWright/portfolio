@@ -51,12 +51,12 @@ function Portfolio() {
 
               <div className='img-link'>
                 <a href={works.link} target='blank'>
-                  <img src={require('../../assets/images/website.png')} />
+                  <img src={require('../../assets/images/website.png')} alt='link'/>
                 </a>
               </div>
               <div className='img-link2'>
                 <a href={works.github} target='blank'>
-                  <img src={require('../../assets/images/github-icon.png')} />
+                  <img src={require('../../assets/images/github-icon.png')} alt='github'/>
                 </a>
               </div>
             </div>

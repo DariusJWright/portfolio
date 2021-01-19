@@ -147,7 +147,7 @@ nav li {
 .img-link, .img-link2 {
   position: absolute;
   opacity: 0;
-  height: auto;
+  height: 50px;
   width: auto;
   display: flex;
   align-items: center;
@@ -164,9 +164,12 @@ nav li {
   right: 25%;
 }
 
+.img-link a img, .img-link2 a img {
+  height: 150px;
+}
 .img-container:hover .img-link,
 .img-container:hover .img-link2 {
-  opacity: 100%;
+  opacity: 1;
 }
 
 /*=====================*/

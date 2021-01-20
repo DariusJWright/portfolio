@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: sans-serif;
 }
 
 html, body {
   height: 100%;
-  /* margin-bottom: 20px; */
 }
 
 body {
@@ -167,6 +167,7 @@ nav li {
 .img-link a img, .img-link2 a img {
   height: 150px;
 }
+
 .img-container:hover .img-link,
 .img-container:hover .img-link2 {
   opacity: 1;

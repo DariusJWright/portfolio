@@ -25,6 +25,7 @@ h2 {
 h3 {
   font-size: 1.75em;
 }
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +39,7 @@ a {
 /* header styles */
 header {
   display: grid;
-  grid-template-columns: 1fr auto minmax(500px, 3fr) 1fr;
+  grid-template-columns: 1fr auto minmax(550px, 3fr) 1fr;
   padding: 10px;
   text-align: center;
   position: sticky;

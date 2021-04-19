@@ -22,15 +22,7 @@ function Portfolio() {
       image: 'bored',
       link: 'https://josephptflanagan.github.io/project-1/',
       github: 'https://github.com/josephptflanagan/project-1'
-    },
-    {
-      name: 'Note Taker',
-      desc: 'Front-end',
-      image: 'note',
-      link: 'https://limitless-citadel-95475.herokuapp.com/notes',
-      github: 'https://github.com/dariusjwright/note-taker'
     }
-
   ]
   return (
     <section className='port'>

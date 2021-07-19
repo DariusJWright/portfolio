@@ -133,16 +133,26 @@ nav li {
   margin-right: 15px;
   width: 100%;
   position: relative;
+  text-align: center;
 }
 
 .thumbnail {
   margin-top: 20px;
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 .img-desc {
   font-size: 25px;
+}
+
+.img-name {
+  font-weight: 700;
+}
+
+.description {
+  font-size: 18px;
 }
 
 .img-link, .img-link2 {
@@ -269,7 +279,8 @@ section h2 {
   grid-column-start: 2;
   height: auto;
   width: 100%;
-  margin-top: 15px;
+  margin: 15px 0;
+  border-radius: 15px;
 }
 
 .about-text {

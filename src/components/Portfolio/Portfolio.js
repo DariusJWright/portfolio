@@ -22,6 +22,13 @@ function Portfolio() {
       image: 'bored',
       link: 'https://josephptflanagan.github.io/project-1/',
       github: 'https://github.com/josephptflanagan/project-1'
+    },
+    {
+      name: 'Weather PWA',
+      desc: 'A simple search by city weather pwa',
+      image: 'weather-pwa',
+      link: 'https://dw-weather-pwa.netlify.app/',
+      github: 'https://github.com/DariusJWright/weather-pwa'
     }
   ]
   return (
@@ -38,7 +45,8 @@ function Portfolio() {
               />
 
               <div className='img-desc'>
-                <p>{works.desc}</p>
+                <p className='img-name'>{works.name}</p>
+                <p className='description'>{works.desc}</p>
               </div>
 
               <div className='img-link'>
